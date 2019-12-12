@@ -53,6 +53,13 @@ use rand::Rng;
 	      }
         }  
 	      println!("Random Integers: {}", rng1); 
+		if rng1 = 0 {
+		hp = 0;
+		println!("HP: {}", hp);
+		}
+		if hp = 0 {
+		println!("You've died");
+		}
 	   
 	      //do not place anything after this
 }
