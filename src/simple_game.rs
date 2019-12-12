@@ -28,7 +28,7 @@ use rand::Rng;
 			//String name;
 	      // Generate random integers in range 0 to 50
     		let rng0 = rand::thread_rng().gen_range(0, 51);
-    		let rng1 = rand::thread_rng().gen_range(0, 51);
+    		let rng1 = rand::thread_rng().gen_range(0, 1);
 		
 
 	      println!("Starting HP: {}", hp);
@@ -52,7 +52,7 @@ use rand::Rng;
 	    	  println!("HP: {}", hp);
 	      }
         }  
-	      println!("Random Integers: {}", rng1); 
+	      println!("2nd Dice Roll: {}", rng1); 
 		if rng1 == 0 {
 		hp = 0;
 		println!("HP: {}", hp);
