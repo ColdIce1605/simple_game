@@ -28,7 +28,7 @@ use rand::Rng;
 			//String name;
 	      // Generate random integers in range 0 to 50
     		let rng0 = rand::thread_rng().gen_range(0, 51);
-    		let rng1 = rand::thread_rng().gen_range(0, 1);
+    		let rng1 = rand::thread_rng().gen_range(0, 26);
 		
 
 	      println!("Starting HP: {}", hp);
@@ -48,7 +48,7 @@ use rand::Rng;
         
 	      else {
 	    	  println!("Dice Roll: {}", rng0);
-	    	  //println!(name + " lives a another day.");
+	    	  println!(name + " lives a another day.");
 	    	  println!("HP: {}", hp);
 	      }
         }  
