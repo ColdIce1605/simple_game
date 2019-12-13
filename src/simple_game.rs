@@ -48,7 +48,7 @@ use rand::Rng;
         
 	      else {
 	    	  println!("Dice Roll: {}", rng0);
-	    	  println!(name, "{} lives a another day.");
+	    	  println!("{} lives a another day.", name);
 	    	  println!("HP: {}", hp);
 	      }
         }  
