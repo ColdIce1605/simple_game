@@ -11,7 +11,7 @@ use rand::Rng;
 			println!("Welcome to a game.");
 		
 			println!("Please enter your name: ");
-				let mut name: u32 = String::new();
+				let mut name = String::new();
 				match io::stdin().read_line(&mut name) {
     					Ok(n) => {
 						println!("{} bytes read", n);
@@ -19,13 +19,12 @@ use rand::Rng;
    					 }
    				 Err(error) => println!("error: {}", error),
 				}				
-
-		numgen(); // no errors in rust :)
-	}
-	pub fn numgen() {
+/// Number Gen
+		
+		
 		  //Random rand = new Random(); 
 			let mut hp: i8 = 10;
-			 let name: u32 = 3name;
+			 let name = name;
 	      // Generate random integers in range 0 to 50
     		let rng0 = rand::thread_rng().gen_range(0, 51);
     		let rng1 = rand::thread_rng().gen_range(0, 26);
