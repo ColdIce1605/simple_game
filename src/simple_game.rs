@@ -22,9 +22,8 @@ use rand::Rng;
 /// Number Gen
 		
 		
-		  //Random rand = new Random(); 
 			let mut hp: i8 = 10;
-			 let name = name;
+		
 	      // Generate random integers in range 0 to 50
     		let rng0 = rand::thread_rng().gen_range(0, 51);
     		let rng1 = rand::thread_rng().gen_range(0, 26);
