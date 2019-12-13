@@ -11,7 +11,7 @@ use rand::Rng;
 			println!("Welcome to a game.");
 		
 			println!("Please enter your name: ");
-				let mut name = String::new();
+				let mut name: u32 = String::new();
 				match io::stdin().read_line(&mut name) {
     					Ok(n) => {
 						println!("{} bytes read", n);
