@@ -1,0 +1,26 @@
+use laminar::{SocketEvent, Socket};
+
+// create the socket
+let socket = Socket::bind("127.0.0.1:12346")?;
+let event_receiver = socket.get_event_receiver();
+// this will start the socket, which will start a poll mechanism to receive and send messages.
+let _thread = thread::spawn(move || socket.start_polling());
+
+// wait until a socket event occurs
+let result = event_receiver.recv();
+
+match result {
+    Ok(socket_event) => {
+        match  socket_event {
+            SocketEvent::Packet(packet) => {
+                let endpoint: SocketAddr = packet.addr();
+                let received_data: &[u8] = packet.payload();
+            },
+            SocketEvent::Connect(connect_event) => { /* a client connected */ },
+            SocketEvent::Timeout(timeout_event) => { /* a client timed out */},
+        }
+    }
+    Err(e) => {
+        println!("Something went wrong when receiving, error: {:?}", e);
+    }
+}
